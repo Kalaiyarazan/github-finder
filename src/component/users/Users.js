@@ -1,11 +1,12 @@
 import React, { Fragment } from 'react';
 import UserItem from './UserItem';
+import Spinner from '../layout/Spinner';
 
 const Users = ({ users, loading }) => {
   return (
     <Fragment>
       {loading ? (
-        <div>Loading....</div>
+        <Spinner />
       ) : (
         <div className='users-container'>
           {users.map(user => (
