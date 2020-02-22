@@ -64,3 +64,26 @@ body {
   align-items: center;
   height: 80vh;
 }
+
+/* ********Search************ */
+.search {
+  margin: 10px 0px;
+}
+.search form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search form input {
+  width: 86%;
+  height: 40px;
+}
+
+.search form button {
+  background-color: peru;
+  color: white;
+  padding: 0px 30px;
+  border: none;
+  height: 40px;
+}
