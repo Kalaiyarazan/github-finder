@@ -7,6 +7,7 @@ body {
   font-family: 'Roboto';
 }
 
+/* **********Navbar******** */
 .navbar {
   display: flex;
   padding: 10px;
@@ -16,6 +17,41 @@ body {
   height: 50px;
 }
 
-.fab {
+.navbar .fab {
   margin-right: 10px;
+}
+
+/* **********User Item************** */
+
+.user-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid grey;
+}
+.user-card img {
+  width: 100px;
+  border-radius: 50%;
+}
+
+.user-card .btn {
+  text-decoration: none;
+  background-color: crimson;
+  color: #fff;
+  padding: 5px 20px;
+}
+
+/* *********Users********** */
+.users-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.user-item-container {
+  width: 30%;
+  margin: 10px;
 }
