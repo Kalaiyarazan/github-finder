@@ -7,11 +7,27 @@ class Search extends Component {
 
   onChange = e => {
     this.setState({ [e.target.name]: e.target.value });
+    this.showAlert(false);
   };
 
   onSubmit = e => {
     e.preventDefault();
-    this.props.searchUsers(this.state.search);
+    if (this.state.search) {
+      this.props.searchUsers(this.state.search);
+    } else {
+      this.showAlert(true);
+    }
+  };
+
+  showAlert = toggle => {
+    if (toggle) {
+      this.props.setAlert('Please enter something', 'danger');
+      setTimeout(() => {
+        this.props.setAlert(null, null);
+      }, 3000);
+    } else {
+      this.props.setAlert(null, null);
+    }
   };
 
   render() {
@@ -27,6 +43,11 @@ class Search extends Component {
           />
           <button type='submit'>Search</button>
         </form>
+        {this.props.showClear && (
+          <button className='clear-btn' onClick={this.props.clearUsers}>
+            Clear
+          </button>
+        )}
       </div>
     );
   }
