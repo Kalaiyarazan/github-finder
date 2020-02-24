@@ -5,8 +5,10 @@ const Navbar = ({ icon = 'fab fa-github fa-2x', title = 'Github Finder' }) => {
   return (
     <nav className='navbar'>
       <div className='nav-header'>
-        <i className={icon} />
-        <h1>{title}</h1>
+        <Link to='/' className='nav-header'>
+          <i className={icon} />
+          <h1>{title}</h1>
+        </Link>
       </div>
 
       <div className='nav-menu'>

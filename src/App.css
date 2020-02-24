@@ -31,6 +31,9 @@ body {
 }
 .nav-header {
   display: flex;
+  text-decoration: none;
+  color: white;
+  text-shadow: 2px 2px 7px grey;
 }
 
 .nav-menu {
