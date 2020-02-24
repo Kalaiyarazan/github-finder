@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Search extends Component {
   state = {
@@ -53,4 +54,10 @@ class Search extends Component {
   }
 }
 
+Search.propTypes = {
+  searchUsers: PropTypes.func.isRequired,
+  clearUsers: PropTypes.func.isRequired,
+  showClear: PropTypes.bool.isRequired,
+  setAlert: PropTypes.func.isRequired
+};
 export default Search;

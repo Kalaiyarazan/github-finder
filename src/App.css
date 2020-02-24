@@ -7,9 +7,18 @@ body {
   font-family: 'Roboto';
 }
 
+/* **********Home/App*********** */
+.home-container {
+  display: block;
+  align-items: center;
+  width: 95%;
+  margin: 0px auto;
+}
+
 /* **********Navbar******** */
 .navbar {
   display: flex;
+  justify-content: space-between;
   padding: 10px;
   align-items: center;
   background-color: blueviolet;
@@ -20,7 +29,21 @@ body {
 .navbar .fab {
   margin-right: 10px;
 }
+.nav-header {
+  display: flex;
+}
 
+.nav-menu {
+  display: flex;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #fff;
+  margin: 10px 20px;
+  border: 1px solid #fff;
+  padding: 7px 20px;
+}
 /* **********User Item************** */
 
 .user-card {
@@ -29,7 +52,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 20px;
-  border: 1px solid grey;
+  /* border: 1px solid grey; */
 }
 .user-card img {
   width: 100px;
@@ -40,7 +63,7 @@ body {
   text-decoration: none;
   background-color: crimson;
   color: #fff;
-  padding: 5px 20px;
+  padding: 8px 20px;
 }
 
 /* *********Users********** */
@@ -52,8 +75,9 @@ body {
 }
 
 .user-item-container {
-  width: 30%;
+  width: 440px;
   margin: 10px;
+  box-shadow: 0px 0px 5px grey;
 }
 
 /* ******Spinner********* */
@@ -67,7 +91,8 @@ body {
 
 /* ********Search************ */
 .search {
-  margin: 10px 0px;
+  margin: 10px auto;
+  width: 95%;
 }
 .search form {
   display: flex;
@@ -79,7 +104,7 @@ body {
 .search form input {
   font-size: 20px;
   padding: 10px;
-  width: 86%;
+  width: 100%;
 }
 
 .search form button {
@@ -89,7 +114,7 @@ body {
   color: white;
   padding: 0px 30px;
   border: none;
-  width: 86%;
+  width: 100%;
   height: 40px;
 }
 
@@ -102,7 +127,7 @@ body {
   color: white;
   padding: 0px 30px;
   border: none;
-  width: 86%;
+  width: 100%;
   height: 40px;
 }
 
@@ -119,4 +144,127 @@ body {
 
 .danger {
   background-color: indianred;
+}
+
+/* ***********User*********** */
+
+.user-details {
+  display: flex;
+  margin: 20px 0px;
+}
+.left-section {
+  width: 30%;
+  padding: 0px 10px;
+  /* border-right: 1px solid grey; */
+}
+
+.avatar {
+  text-align: center;
+}
+.avatar img {
+  box-shadow: 0px 0px 5px black;
+}
+
+.profile-info {
+  margin-top: 30px;
+}
+
+.profile-info h2 {
+  padding-bottom: 10px;
+  border-bottom: 1px solid grey;
+}
+
+.profile-info p {
+  margin: 15px;
+}
+
+.profile-info a {
+  text-decoration: none;
+}
+
+.btn {
+  display: block;
+  padding: 10px 30px;
+  margin: 10px 0px;
+  width: 50%;
+  text-align: center;
+  background-color: indigo;
+  color: white;
+}
+
+.right-section {
+  width: 70%;
+}
+/* 
+.right-section h1 {
+  padding-bottom: 10px;
+  border-bottom: 1px solid grey;
+} */
+
+.github-info {
+  margin: 15px;
+}
+.counter-btn {
+  margin: 20px 0px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.counter-btn p {
+  text-align: center;
+  width: 210px;
+  margin: 10px;
+  padding: 10px 40px;
+  color: white;
+}
+
+.followers {
+  background-color: #4f3961;
+}
+.following {
+  background-color: #ff677d;
+}
+.repos {
+  background-color: #4d80e4;
+}
+.gists {
+  background-color: #61d4b3;
+}
+
+.github-info-header,
+.repos-header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  border-bottom: 1px solid grey;
+}
+.github-info-header h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 25px;
+  /* border: 1px solid blueviolet; */
+  background-color: #e3e7f1;
+  border-radius: 20px;
+  box-shadow: 2px 2px 5px grey;
+}
+.github-info-header strong {
+  margin: 0px 5px;
+}
+.github-repos {
+  margin-top: 20px;
+  margin-left: -15px;
+}
+
+/* *******Repo Item******** */
+
+.repo-item {
+  text-decoration: none;
+  padding: 20px 0px;
+  margin: 10px 20px;
+  border-bottom: 1px solid grey;
+}
+.repo-item a {
+  text-decoration: none;
+  color: blue;
 }

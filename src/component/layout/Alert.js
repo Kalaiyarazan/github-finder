@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
 
 const Alert = ({ alert: { message, type } }) => {
   return (
@@ -10,6 +11,10 @@ const Alert = ({ alert: { message, type } }) => {
       )}
     </Fragment>
   );
+};
+
+Alert.propTypes = {
+  alert: PropTypes.object.isRequired
 };
 
 export default Alert;
