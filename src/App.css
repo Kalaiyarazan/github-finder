@@ -271,3 +271,18 @@ body {
   text-decoration: none;
   color: blue;
 }
+
+@media only screen and (max-width: 1020px) {
+  .user-details {
+    flex-direction: column;
+  }
+
+  .left-section,
+  .right-section {
+    width: 100%;
+  }
+
+  .github-info-header {
+    margin-top: 30px;
+  }
+}
