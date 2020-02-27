@@ -5,6 +5,7 @@
 }
 body {
   font-family: 'Roboto';
+  background-color: #f7f7f7;
 }
 
 /* **********Home/App*********** */
@@ -95,11 +96,24 @@ body {
 /* ********Search************ */
 .search {
   margin: 10px auto;
-  width: 95%;
+  width: 90%;
+  padding: 0% 20%;
 }
+.search.full-width {
+  padding: 0%;
+}
+
+.search.center form {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+}
+
 .search form {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
@@ -108,6 +122,7 @@ body {
   font-size: 20px;
   padding: 10px;
   width: 100%;
+  text-align: center;
 }
 
 .search form button {
@@ -117,32 +132,38 @@ body {
   color: white;
   padding: 0px 30px;
   border: none;
-  width: 100%;
-  height: 40px;
+  width: 200px;
+  height: 50px;
+
+  border-radius: 5px;
 }
 
 .search .clear-btn {
-  display: flex;
-  justify-content: center;
   background-color: grey;
   font-size: 20px;
-  margin: auto;
+  margin: 10px;
   color: white;
   padding: 0px 30px;
   border: none;
-  width: 100%;
-  height: 40px;
+  width: 200px;
+  height: 50px;
+}
+
+.search-buttons {
+  display: flex;
 }
 
 /* *********Alert*********** */
 
 .alert {
   display: flex;
+  align-items: center;
   margin: 10px auto;
   padding: 10px;
   border-radius: 5px;
-  background-color: grey;
-  width: 86%;
+  background-color: #f4dada;
+  color: red;
+  width: 95%;
 }
 
 .danger {
@@ -284,5 +305,18 @@ body {
 
   .github-info-header {
     margin-top: 30px;
+  }
+  .search {
+    margin: 10px auto;
+    width: 90%;
+    padding: 0% 0%;
+  }
+  .search.full-width form {
+    flex-direction: column;
+    padding: 0%;
+  }
+
+  .search.center form {
+    flex-direction: column;
   }
 }

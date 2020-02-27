@@ -1,20 +1,23 @@
-import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
+import React, { Fragment, useContext } from 'react';
+import AlertContext from '../context/alert/alertContext';
+import { IoMdAlert } from 'react-icons/io';
 
-const Alert = ({ alert: { message, type } }) => {
+const Alert = () => {
+  const alertContext = useContext(AlertContext);
+  const { alert } = alertContext;
+
   return (
     <Fragment>
-      {message && (
-        <div className={`alert ${type}`}>
-          <p>{message}</p>
+      {alert && (
+        <div className='alert'>
+          <p>
+            <IoMdAlert size='25px' />
+          </p>
+          <p>{alert}</p>
         </div>
       )}
     </Fragment>
   );
-};
-
-Alert.propTypes = {
-  alert: PropTypes.object.isRequired
 };
 
 export default Alert;

@@ -1,16 +1,20 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { Fragment, useEffect, useContext } from 'react';
 import { FaCheckSquare, FaWindowClose } from 'react-icons/fa';
 import { GoLinkExternal } from 'react-icons/go';
 import Repos from '../repos/Repos';
 import Spinner from '../layout/Spinner';
-import PropTypes from 'prop-types';
 
-const User = ({ user, loading, repos, getUser, getUserRepos, match }) => {
+import GithubContext from '../context/github/githubContext';
+
+const User = ({ match }) => {
   useEffect(() => {
     getUser(match.params.login);
     getUserRepos(match.params.login);
     // eslint-disable-next-line
   }, []);
+
+  const githubContext = useContext(GithubContext);
+  const { user, repos, getUserRepos, getUser, loading } = githubContext;
 
   const {
     login,
@@ -114,11 +118,4 @@ const User = ({ user, loading, repos, getUser, getUserRepos, match }) => {
   );
 };
 
-User.propTypes = {
-  getUser: PropTypes.func.isRequired,
-  getUserRepos: PropTypes.func.isRequired,
-  user: PropTypes.object.isRequired,
-  repos: PropTypes.array.isRequired,
-  loading: PropTypes.bool.isRequired
-};
 export default User;
