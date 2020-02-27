@@ -1,9 +1,14 @@
 import React from 'react';
+import { FaGithub, FaHeart } from 'react-icons/fa';
 
 const About = () => {
   return (
-    <div>
-      <h2>Application to find Github users</h2>
+    <div className='about'>
+      <FaGithub size='100' />
+      <h2>Github Finder v1.0</h2>
+      <p>
+        With <FaHeart /> Kalaiyarazan
+      </p>
     </div>
   );
 };

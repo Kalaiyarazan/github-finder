@@ -292,6 +292,16 @@ body {
   text-decoration: none;
   color: blue;
 }
+/* ************About************ */
+
+.about,
+.not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
 
 @media only screen and (max-width: 1020px) {
   .user-details {
