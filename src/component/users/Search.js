@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import GithubContext from '../context/github/githubContext';
 import AlertContext from '../context/alert/alertContext';
+import Alert from '../layout/Alert';
 
 const Search = () => {
   const [search, setSearch] = useState('');
@@ -39,6 +40,9 @@ const Search = () => {
 
   return (
     <div className={`search ${users.length === 0 ? 'center' : 'full-width'}`}>
+      <div className='alert-position'>
+        <Alert />
+      </div>
       <form onSubmit={onSubmit}>
         <input
           type='text'

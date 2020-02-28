@@ -11,7 +11,6 @@ body {
 /* **********Home/App*********** */
 .home-container {
   display: block;
-  align-items: center;
   width: 95%;
   margin: 0px auto;
 }
@@ -106,11 +105,20 @@ body {
 .search.center form {
   height: 90vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  align-items: center;
 }
 
+.search.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 300px;
+}
+.center .alert-position {
+  margin-top: 40px;
+}
 .search form {
   display: flex;
   flex-direction: row;
@@ -328,10 +336,14 @@ body {
 
   .search.center form {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .search-buttons {
     width: 350px;
+    display: flex;
+    justify-content: center;
   }
   .navbar {
     height: 100px;

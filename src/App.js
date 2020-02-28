@@ -4,7 +4,7 @@ import './App.css';
 import Navbar from './component/layout/Navbar';
 import Home from './component/pages/Home';
 import NotFound from './component/pages/NotFound';
-import Alert from './component/layout/Alert';
+// import Alert from './component/layout/Alert';
 import About from './component/pages/About';
 import User from './component/users/User';
 
@@ -19,7 +19,7 @@ const App = () => {
           <div className='App'>
             <Navbar />
             <div className='home-container'>
-              <Alert />
+              {/* <Alert /> */}
               <Switch>
                 <Route exact path='/' component={Home} />
                 <Route path='/about' component={About} />
